@@ -19,13 +19,10 @@
             <div class="navlists">
                 <ul class="navlink">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="./about.html">About</a></li>
                     <li><a href="#">Adopt</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
-            </div>
-            <div class="cart">
-                <img src="./images/shopping-cart.png" alt="cart image">
             </div>
         </nav>
         <div class="hero">
@@ -91,77 +88,24 @@
             </div>
         </section>
         <section class="featured">
-            <div class="featured-text">
-                <h2>Find Your New Friend</h2>
-                <p>Expore Our growing collection of lovable dogs waiting for their forever homes.</p>
-            </div>
-            <div class="featured-card-container">
-                <div class="box">
-                    <div class="box-image">
-                        <img src="./images/front-view-cute-dog-standing.jpg" alt="">
-                    </div>
-                    <div class="box-text">
-                        <h3 class="dogName">Brandy</h3>
-                        <p class="breed">husky</p>                    
-                        <p class="tags">male, 3 years, wild</p>
-                        <button class="adopt">Adopt Me</button>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-image">
-                        <img src="./images/front-view-cute-dog-standing.jpg" alt="">
-                    </div>
-                    <div class="box-text">
-                        <h3 class="dogName">Brandy</h3>
-                        <p class="breed">husky</p>                    
-                        <p class="tags">male, 3 years, wild</p>
-                        <button class="adopt">Adopt Me</button>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-image">
-                        <img src="./images/front-view-cute-dog-standing.jpg" alt="">
-                    </div>
-                    <div class="box-text">
-                        <h3 class="dogName">Brandy</h3>
-                        <p class="breed">husky</p>                    
-                        <p class="tags">male, 3 years, wild</p>
-                        <button class="adopt">Adopt Me</button>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-image">
-                        <img src="./images/front-view-cute-dog-standing.jpg" alt="">
-                    </div>
-                    <div class="box-text">
-                        <h3 class="dogName">Brandy</h3>
-                        <p class="breed">husky</p>                    
-                        <p class="tags">male, 3 years, wild</p>
-                        <button class="adopt">Adopt Me</button>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-image">
-                        <img src="./images/front-view-cute-dog-standing.jpg" alt="">
-                    </div>
-                    <div class="box-text">
-                        <h3 class="dogName">Brandy</h3>
-                        <p class="breed">husky</p>                    
-                        <p class="tags">male, 3 years, wild</p>
-                        <button class="adopt">Adopt Me</button>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box-image">
-                        <img src="./images/front-view-cute-dog-standing.jpg" alt="">
-                    </div>
-                    <div class="box-text">
-                        <h3 class="dogName">Brandy</h3>
-                        <p class="breed">husky</p>                    
-                        <p class="tags">male, 3 years, wild</p>
-                        <button class="adopt">Adopt Me</button>
-                    </div>
-                </div>  
+            <div class="featured-container">
+                <aside class="sidebar">
+                    <h2>Search Breeds</h2>
+                    <input type="text" id="searchBreed" placeholder="search by Breeds">
+                    <button id="searchBtn">Search</button>
+                    <h3>Popular Breeds</h3>
+                    <div id="breedList"></div>
+                </aside>
+                <main class="display">
+                  <div class="featured-text">
+                    <h2>Find Your New Friend</h2>
+                    <p>Expore Our growing collection of lovable dogs waiting for their forever homes.</p>
+                  </div>
+                  <div class="dog-grid" id="dogGrid">
+                    
+                  </div>
+                </main>
+
             </div>
         </section>
         <div class="contact">
@@ -189,5 +133,6 @@
                 </div>
             </div>
         </footer>
+        <script src="./dog.js"></script>
 </body>
 </html>

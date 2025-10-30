@@ -1,0 +1,135 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: 'poppins, san-serif';
+  background-color: #f5ebeb;
+}
+header{
+  background-color: rgba(255, 123, 0, 0.788);
+  height: 70vh;
+  margin-bottom: 150px;
+}
+.navbar {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 5%;
+  background-color: rgb(255, 115, 0);
+}
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+}
+
+.navlink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.navlink li {
+  list-style-type: none;
+}
+.navlink li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.hero{
+  width: 90%;
+  margin: 100px auto;
+  text-align: center;
+  color: #fff;
+}
+.hero h1{
+  font-size: 3rem;
+  font-weight: bold;
+}
+.hero p{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+section{
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  border-radius: 10px;
+}
+.who-container{
+  width: 100%;
+  background-color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  gap: 20px;
+  border-radius: 10px;
+  border-top: 3px solid orange;
+  border-right: 3px solid orange;
+  border-bottom: 3px solid transparent;
+  border-left: 3px solid transparent;
+}
+.who-text{
+  height: 100%;
+  width: 50%;
+}
+.who-text h2{
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: rgb(255, 123, 0);
+}
+.who-text p{
+  font-size: 20px;
+  line-height: 40px;
+}
+.who-img{
+  width: 50%;
+  
+}
+.who-img img{
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+.mission-container{
+  text-align: center;
+}
+.testimonial-section{
+  height: 30vh;
+}
+.testimonial{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  padding: 20px;
+}
+.testimonial-box{
+
+  height: 100%;
+  padding-top: 20px;
+  background-color: rgb(235, 227, 227);
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px rgba(105, 104, 104, 0.2);
+}
+.testimonial-box h3{
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.testimonial-box p{
+  font-size: 20px;
+  font-weight: bold;
+}

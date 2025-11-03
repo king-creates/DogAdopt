@@ -417,4 +417,185 @@ footer {
   margin-bottom: 20px;
 }
 
+/* -------------------------------
+   Tablet Devices (Width: 768px - 1024px)
+   ------------------------------- */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
 
+  .navlink {
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px 0;
+  }
+
+  .hero {
+    padding: 0 20px;
+  }
+
+  .adopt-card {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .article-container {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .article-img img,
+  .article-img:hover::before {
+    width: 100% !important;
+  }
+
+  .article-text {
+    width: 100%;
+    margin: 0;
+    margin-top: 30px;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .featured-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .dog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    gap: 30px;
+  }
+
+  .socials {
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .social-info {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+/* -------------------------------
+   Mobile Devices (Width: below 768px)
+   ------------------------------- */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navlink {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  .hero span {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .adopt-card {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .article-container {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .linker {
+    display: none;
+  }
+
+  .article-img img {
+    width: 100%;
+  }
+
+  .article-text {
+    width: 100%;
+    margin: 30px 0;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    
+  }
+
+  .sidebar ul{
+    height: 100px;
+    overflow-y: scroll;
+  }
+
+  .sidebar ul::-webkit-scrollbar{
+    display: none;
+  }
+
+  .dog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .socials {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .social-info {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .featured-text h2 {
+    font-size: 2rem;
+  }
+
+  .featured-text p {
+    font-size: 1rem;
+  }
+}

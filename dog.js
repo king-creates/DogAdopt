@@ -16,12 +16,19 @@ async function loadAllBreeds(){
 // function to create the breed list on the Dom
 function createBreedList(listedBreed){
   breedList.innerHTML = `
-  <ul onchange = "loadDogByBreed(this.value)">
+  <ul>
     ${Object.keys(listedBreed).map((item)=>{
       return `<li>${item}</li>`
     }).join('')} 
   </ul>`
   
+  const listItems = breedList.querySelectorAll('li');
+    listItems.forEach((li)=>{
+      li.addEventListener('click', (e) =>{
+        let breed = e.target.textContent;
+        loadDogsByBreed(breed);
+      })
+    })
 }
 
 // function to display random dogs on initial loading
@@ -72,13 +79,7 @@ function displayDogs(images, breedName = "") {
     dogGrid.appendChild(card);
 
   });
-  const listItems = breedList.querySelectorAll('li');
-    listItems.forEach((li)=>{
-      li.addEventListener('click', (e) =>{
-        let breed = e.target.textContent;
-        loadDogsByBreed(breed);
-      })
-    })
+  
  
 }
  searchBtn.addEventListener('click', () =>{

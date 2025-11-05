@@ -39,6 +39,25 @@ header {
   justify-content: center;
   gap: 50px;
 }
+.hamburger{
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 100
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
 .navlink li {
   list-style-type: none;
 }
@@ -417,21 +436,57 @@ footer {
   margin-bottom: 20px;
 }
 
-/* -------------------------------
-   Tablet Devices (Width: 768px - 1024px)
-   ------------------------------- */
+/*Tablet Devices (Width: 768px - 1024px)*/
 @media (max-width: 1024px) {
   .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
+    flex-direction: row;
+    padding: 10px;
+  }
+  
+  .hamburger{
+    display: flex;
   }
 
   .navlink {
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 20px 0;
+    position: fixed;
+    top: 0;
+    right: -80%;
+    height: 60vh;
+    width: 40%;
+    max-width: 200px;
+    background-color: transparent;
+    flex-direction: column;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    margin-top: 0;
+    }
+  .navlink.active {
+        right: 0;
+    }
+    
+    .navlink li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .navlink li a {
+        display: block;
+        font-size: 1.2rem;
+        color: #fff;
+    } 
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
   }
+    
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+    
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
 
   .hero {
     padding: 0 20px;
@@ -493,23 +548,61 @@ footer {
   }
 }
 
-/* -------------------------------
-   Mobile Devices (Width: below 768px)
-   ------------------------------- */
+/* Mobile Devices (Width: below 768px) */
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
   }
 
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px;
+  }
+  
+  .hamburger{
+    display: flex;
   }
 
   .navlink {
+    position: fixed;
+    top: 0;
+    right: -80%;
+    height: 60vh;
+    width: 40%;
+    max-width: 200px;
+    background-color: transparent;
     flex-direction: column;
-    gap: 15px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    margin-top: 0;
+    }
+  .navlink.active {
+        right: 0;
+    }
+    
+    .navlink li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .navlink li a {
+        display: block;
+        font-size: 1.2rem;
+        color: #fff;
+    } 
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
   }
+    
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+    
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
 
   .hero h1 {
     font-size: 1.8rem;
@@ -556,7 +649,7 @@ footer {
   }
 
   .sidebar ul{
-    height: 100px;
+    height: 200px;
     overflow-y: scroll;
   }
 
@@ -598,4 +691,8 @@ footer {
   .featured-text p {
     font-size: 1rem;
   }
+
 }
+
+
+

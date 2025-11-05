@@ -3,6 +3,8 @@ const dogGrid = document.getElementById("dogGrid");
 const breedList = document.getElementById("breedList");
 const searchBtn = document.getElementById("searchBtn");
 const searchBreed = document.getElementById("searchBreed");
+const hamburger = document.querySelector('.hamburger');
+const navlink = document.querySelector('.navlink');
 
 getRandomDogs();
 loadAllBreeds();
@@ -98,3 +100,33 @@ function displayDogs(images, breedName = "") {
          loadDogsByBreed(breed);
       }
     })
+
+
+// Toggle menu function
+hamburger.addEventListener('click', () => {
+    navlink.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    
+    // Update aria-expanded for accessibility
+    const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !isExpanded);
+});
+
+// Close menu when clicking on a link
+const navLinks = document.querySelectorAll('.navlink a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navlink.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navlink.contains(e.target)) {
+        navlink.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
+});

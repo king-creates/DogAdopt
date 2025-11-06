@@ -462,6 +462,9 @@ footer {
 }
 /*Tablet Devices (Width: 768px - 1024px)*/
 @media (max-width: 1024px) {
+   body {
+    overflow-x: hidden;
+  }
   .navbar {
     flex-direction: row;
     padding: 10px;
@@ -480,12 +483,12 @@ footer {
     line-height: 1px;
     max-width: 200px;
     background-color: transparent;
-    /* flex-direction: column; */
+    flex-direction: column;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease-in-out;
     margin-top: 0;
     }
-    
+
   .navlink.active {
         right: 0;
     }
@@ -515,7 +518,12 @@ footer {
 
 
   .hero {
+    margin-top: 300px;
     padding: 0 20px;
+  }
+
+  .linker {
+    display: none;
   }
 
   .adopt-card {
@@ -526,6 +534,8 @@ footer {
   .article-container {
     flex-direction: column;
     padding: 50px 20px;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .article-img img,
@@ -603,7 +613,7 @@ footer {
     line-height: 1px;
     max-width: 200px;
     background-color: transparent;
-    /* flex-direction: column; */
+    flex-direction: column;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease-in-out;
     margin-top: 0;

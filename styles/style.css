@@ -472,7 +472,7 @@ footer {
   }
 
   .navlink {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: -80%;
     height: 60vh;
@@ -528,7 +528,7 @@ footer {
 
   .article-img img,
   .article-img:hover::before {
-    width: 100% !important;
+    width: 100% ;
   }
 
   .article-text {
@@ -593,7 +593,7 @@ footer {
   }
 
   .navlink {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: -80%;
     height: 60vh;

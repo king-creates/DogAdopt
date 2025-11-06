@@ -548,6 +548,11 @@ footer {
     margin-bottom: 30px;
   }
 
+    .sidebar ul{
+    height: 200px;
+    overflow-y: scroll;
+  }
+
   .dog-grid {
     grid-template-columns: repeat(2, 1fr);
   }

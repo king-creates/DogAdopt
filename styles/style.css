@@ -471,19 +471,21 @@ footer {
     display: flex;
   }
 
-  .navlink {
+   .navlink {
     position: absolute;
     top: 0;
     right: -80%;
-    height: 60vh;
+    height:50vh;
     width: 40%;
+    line-height: 1px;
     max-width: 200px;
     background-color: transparent;
-    flex-direction: column;
+    /* flex-direction: column; */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease-in-out;
     margin-top: 0;
     }
+    
   .navlink.active {
         right: 0;
     }
@@ -596,11 +598,12 @@ footer {
     position: absolute;
     top: 0;
     right: -80%;
-    height: 60vh;
+    height:50vh;
     width: 40%;
+    line-height: 1px;
     max-width: 200px;
     background-color: transparent;
-    flex-direction: column;
+    /* flex-direction: column; */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease-in-out;
     margin-top: 0;
@@ -612,12 +615,14 @@ footer {
     .navlink li {
         width: 100%;
         text-align: center;
+    
     }
     
     .navlink li a {
         display: block;
         font-size: 1.2rem;
         color: #fff;
+        
     } 
 
 .hamburger.active span:nth-child(1) {
